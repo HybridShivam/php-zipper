@@ -2,7 +2,7 @@
 Configuration for apache on Ubuntu.
 [ Assuming the project is at `DocumentRoot/zipper` ]
 
-Install php-zip mod and enable it:
+Install `php-zip mod` and enable it:
 ```
 sudo apt-get install php-zip
 sudo phpenmod zip
