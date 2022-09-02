@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- meta -->
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Zipper - Zip Files Online</title>
+  <meta content="" name="keywords">
+  <meta content="" name="description">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Poppins:300,300i,400,400i,500,500i,600,600i,700,700i|Playfair+Display:400,400i,700,700i,900,900i"
+    rel="stylesheet">
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <!--  RadioButtons Stylesheets-->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pretty-checkbox@3.0/dist/pretty-checkbox.min.css">
+  <!-- Main Stylesheet File -->
+  <link href="css/style.css" rel="stylesheet">
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="favicon.ico">
+</head>
+
+<body>
+
+  <!-- start section about us -->
+  <div id="about" class="padsection">
+    <div class="container">
+      <div class="row justify-content-between">
+        <div class="col-lg-4">
+          <div class="div-img-bg zipper-image">
+            <div class="about-img">
+              <img src="img/ZIPArt.jpg" class="img-responsive" alt="me">
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-7">
+          <div class="about-descr">
+            <img src="img/Zipper.svg" style="width: 100%" class="img-fluid thematic-logo" alt="Responsive image" />
+            <p class="p-heading">A Free Online Zipper Utility created as a Demo Project.</p>
+            <p class="separator">Created using PHP ZipArchive class.<br>As a Demo Project only upto 5 files are supported with a max size of 100KB each. This
+              protects the server from running out of resources. Download links last for about 24 hours, as a cleanup mechanism has been setup to clean
+              uploaded files after every 24 hours. You can choose to either enable compression(deflate) or disable compression(store).</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- end section about us -->
+
+  <!-- start section zip -->
+  <div id="zipper" class="padsection">
+    <div class="container">
+      <div class="zipper-block1">
+        <div class="row">
+          <div class="col-lg-6">
+            <form action="php/zip.php" method="post" role="form" class="zipperForm" enctype="multipart/form-data">
+              <div class="row">
+                <div class="col-lg-6">
+                  <div class="form-group zipper-block1">
+                    <input type="text" name="name" class="form-control" id="name" placeholder="Name Of Archive" data-msg="Please enter at least 1 chars"
+                      required pattern="([A-z0-9À-ž-\._]){1,}" title="Allowed Input : A-z 0-9 - _ . ( Spaces not allowed )!!!" />
+                  </div>
+                </div>
+                <div class="col-lg-12">
+                  <div class="form-group">
+                    <label for="file" class="custom-file-upload">
+                      <i class="fa fa-cloud-upload"></i> <span id="SelectFiles">Select Files ( Upto 5 Files )</span>
+                    </label>
+                    <input type="file" class="inputfile" name="file[]" id="file" multiple required onchange="fileChange()" />
+                  </div>
+                </div>
+                <div class="col-xl-3">
+                  <div class="form-group zipper-block1 pretty p-switch p-fill">
+                    <input type="checkbox" name="compress" class="form-control" checked id="compress" placeholder="Name Of Archive" value="deflate" />
+                    <div class="state">
+                      <label>Enable Compression</label>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-12">
+                  <input type="submit" class="btn btn-default btn-send" name="submit" value="Create Archive">
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- end section zip -->
+
+
+  <!-- start section footer -->
+  <div id="footer" class="text-center">
+    <div class="container">
+      <div class="socials-media text-center">
+        <div class="col-12">
+          <h3 class="text-center"><a href="http://hybridshivam.com"><i class="fa fa-home" style="color: #999999" aria-hidden="true"></i></a></h3>
+        </div>
+        <br>
+        <ul class="list-unstyled">
+          <li><a href="https://twitter.com/hybridshivam/" target="_blank"><i class="fa fa-twitter"></i></a></li>
+          <li><a href="https://github.com/HybridShivam" target="_blank"><i class="fa fa-github"></i></a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <!-- end section footer -->
+
+  <script src="js/script.js"></script>
+</body>
+
+</html>
